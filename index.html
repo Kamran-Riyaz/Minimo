@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Page</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>John Doe</h1>
+      <p><strong>Frontend Developer</strong></p>
+      <nav>
+        <a href="#about">About</a> | <a href="#skills">Skills</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+      </nav>
+      <hr />
+    </header>
+
+    <!-- About Section -->
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm John, a passionate web developer. I love building clean and
+          user-friendly websites.
+        </p>
+        <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Profile Picture" />
+      </section>
+
+      <br />
+
+      <!-- Skills List -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>TypeScript</li>
+        </ul>
+      </section>
+
+      <br />
+
+      <!-- Projects Table -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <table border="1">
+          <tr>
+            <th>Project</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Portfolio Website</td>
+            <td>A personal portfolio to showcase my work.</td>
+          </tr>
+          <tr>
+            <td>Todo App</td>
+            <td>A simple todo app using React.</td>
+          </tr>
+        </table>
+      </section>
+
+      <br />
+
+      <!-- Contact Form -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" cols="30"></textarea
+          ><br /><br />
+
+          <label for="type">Reason for Contact:</label><br />
+          <select id="type" name="type">
+            <option value="job">Job Offer</option>
+            <option value="freelance">Freelance Project</option>
+            <option value="collab">Collaboration</option></select
+          ><br /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <hr />
+      <p>&copy; 2025 John Doe | All rights reserved.</p>
+    </footer>
+  </body>
+</html>
