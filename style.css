@@ -1,3 +1,31 @@
 body {
     font-family: Arial, Helvetica, sans-serif
 }
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.center-list {
+    text-align: center;
+    list-style-type: none;
+}
+
+.list {
+    list-style-type: circle;
+}
+
+.list-item {
+    margin: 0.25em 0;
+}
