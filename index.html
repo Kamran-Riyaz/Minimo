@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio Page</title>
   </head>
-  <body>
+  <body class="dark-mode">
     <!-- Header -->
     <header class="center">
-      <h1 class="large">John Doe</h1>
-      <p><strong>Frontend Developer</strong></p>
-      <nav>
-        <a class="link" href="#about">About</a> &bull; <a class="link" href="#skills">Skills</a> &bull;
-        <a class="link" href="#projects">Projects</a> &bull;
+      <nav class="navigation-bar">
+        <div class="brand">John</div>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#skills">Skills</a>
+        <a class="link" href="#projects">Projects</a>
         <a class="link" href="#contact">Contact</a>
       </nav>
-      <hr class="hr" />
+      <h1 class="large">John Doe</h1>
+      <p><strong>Frontend Developer</strong></p>
     </header>
 
     <!-- About Section -->
@@ -27,14 +28,20 @@
           Hello! I'm John, a passionate web developer. I love building clean and
           user-friendly websites.
         </p>
-        <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Profile Picture" />
+        <div class="center-div">
+        <img
+          src="https://randomuser.me/api/portraits/men/31.jpg"
+          alt="Profile Picture" class="image"
+        />
+      </div>
       </section>
 
       <br />
 
       <!-- Skills List -->
       <section id="skills">
-        <h2>Skills</h2>
+        <h2 class="center">Skills</h2>
+        <div class="center-div">
         <ul class="list">
           <li class="list-item">HTML</li>
           <li class="list-item">CSS</li>
@@ -42,6 +49,7 @@
           <li class="list-item">React</li>
           <li class="list-item">TypeScript</li>
         </ul>
+      </div>
       </section>
 
       <br />
@@ -49,7 +57,7 @@
       <!-- Projects Table -->
       <section id="projects">
         <h2>Projects</h2>
-        <table border="1">
+        <table class="table">
           <tr>
             <th>Project</th>
             <th>Description</th>
@@ -69,18 +77,67 @@
 
       <!-- Contact Form -->
       <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
+        <h2 class="center">Contact Me</h2>
+        <form class="form">
+          <!-- Text Input -->
           <label for="name">Name:</label><br />
           <input type="text" id="name" name="name" /><br /><br />
 
+          <!-- Email Input -->
           <label for="email">Email:</label><br />
           <input type="email" id="email" name="email" /><br /><br />
 
-          <label for="message">Message:</label><br />
-          <textarea id="message" name="message" rows="5" cols="30"></textarea
-          ><br /><br />
+          <!-- URL Input -->
+          <label for="website">Website:</label><br />
+          <input type="url" id="website" name="website" /><br /><br />
 
+          <!-- Telephone Input -->
+          <label for="phone">Phone:</label><br />
+          <input type="tel" id="phone" name="phone" /><br /><br />
+
+          <!-- Number Input -->
+          <label for="age">Age:</label><br />
+          <input type="number" id="age" name="age" min="0" /><br /><br />
+
+          <!-- Date Input -->
+          <label for="date">Preferred Date:</label><br />
+          <input type="date" id="date" name="date" /><br /><br />
+
+          <!-- Time Input -->
+          <label for="time">Preferred Time:</label><br />
+          <input type="time" id="time" name="time" /><br /><br />
+
+          <!-- File Upload -->
+          <label for="file">Upload File (optional):</label><br />
+          <input type="file" id="file" name="file" /><br /><br />
+
+          <!-- Radio Buttons -->
+          <label>Preferred Contact Method:</label><br />
+          <input
+            type="radio"
+            id="contact-email"
+            name="contact_method"
+            value="email"
+          />
+          <label for="contact-email">Email</label><br />
+          <input
+            type="radio"
+            id="contact-phone"
+            name="contact_method"
+            value="phone"
+          />
+          <label for="contact-phone">Phone</label><br /><br />
+
+          <!-- Checkboxes -->
+          <label>Services Interested In:</label><br />
+          <input type="checkbox" id="web-dev" name="services" value="web-dev" />
+          <label for="web-dev">Web Development</label><br />
+          <input type="checkbox" id="design" name="services" value="design" />
+          <label for="design">Design</label><br />
+          <input type="checkbox" id="seo" name="services" value="seo" />
+          <label for="seo">SEO</label><br /><br />
+
+          <!-- Dropdown -->
           <label for="type">Reason for Contact:</label><br />
           <select id="type" name="type">
             <option value="job">Job Offer</option>
@@ -88,13 +145,23 @@
             <option value="collab">Collaboration</option></select
           ><br /><br />
 
-          <button type="submit">Submit</button>
+          <!-- Textarea -->
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" cols="30"></textarea
+          ><br /><br />
+
+          <!-- Hidden Input -->
+          <input type="hidden" name="form_id" value="contact_form_v1" />
+
+          <!-- Reset and Submit Buttons -->
+          <button type="submit" class="button">Submit</button>
+          <button type="reset" class="button-other">Reset</button>
         </form>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="center">
       <hr />
       <p>&copy; 2025 John Doe | All rights reserved.</p>
     </footer>

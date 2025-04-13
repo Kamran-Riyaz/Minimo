@@ -1,98 +1,295 @@
-/* Typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.sub,
+.sup,
+.small,
+.medium,
+.large {
+  font-size: 0.8em;
+}
+
+.sup {
+  vertical-align: super;
+}
+
+.sub {
+  vertical-align: sub;
+}
+
+.medium {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 2.5em;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.hr {
+  border: 0;
+  height: 1px;
+  background-color: #000;
+  margin: 1em 0;
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.list {
+  list-style-type: circle;
+}
+
+.list-item {
+  margin: 0.25em 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 0.8em;
+  text-align: left;
+}
+
+.form {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.form input,
+.form select,
+.form textarea,
+.form button {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form label {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.form button {
+  cursor: pointer;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 6px;
+}
+
+.form label[for="contact-email"],
+.form label[for="contact-phone"],
+.form label[for="web-dev"],
+.form label[for="design"],
+.form label[for="seo"] {
+  display: inline;
+  margin-right: 12px;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button-other {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.button-other:hover {
+  background-color: #5a6268;
+}
+
+.button-red {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.button-red:hover {
+  background-color: #c82333;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3%;
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.navigation-bar {
+  /* Basic styling */
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  width: 100%;
+
+  /* Layout for navbar and items */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* Sticky positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 4rem;
+}
+
+/* Style the nav links */
+.navigation-bar > a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.1rem 0.2rem;
+  margin: 0 0.25rem;
+  transition: color 0.3s;
+}
+
+.navigation-bar > a:hover {
+  color: #007bff;
+}
+
+/* Brand class (separate from navigation-bar) */
+.brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-right: auto;
+  color: #000;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .navigation-bar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  .italic {
-    font-style: italic;
-  }
-  
-  .underline {
-    text-decoration: underline;
-  }
-  
-  .strike {
-    text-decoration: line-through;
-  }
-  
-  .sub,
-  .sup,
-  .small,
-  .medium,
-  .large {
-    font-size: 0.8em;
-  }
-  
-  .sup {
-    vertical-align: super;
-  }
-  
-  .sub {
-    vertical-align: sub;
-  }
-  
-  .medium {
-    font-size: 1em;
-  }
-  
-  .large {
-    font-size: 2.5em;
-  }
-  
-  /* Text alignment */
-  .left {
-    text-align: left;
-  }
-  
-  .right {
-    text-align: right;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .justify {
-    text-align: justify;
-  }
-  
-  /* Links */
-  .link {
-    text-decoration: none;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Horizontal Rule */
-  .hr {
-    border: 0;
-    height: 1px;
-    background-color: #000;
-    margin: 1em 0;
+
+  .brand {
+    margin-bottom: 1rem;
     width: 100%;
-    opacity: 0.5;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
-  
-  /* Lists */
-  .center-list {
-    text-align: center;
-    list-style-type: none;
+
+  .navigation-bar > a {
+    width: 100%;
+    padding: 0.75rem 0;
+    border-top: 1px solid #eee;
   }
-  
-  .list {
-    list-style-type: circle;
+
+  /* Adjust body padding for mobile */
+  body {
+    padding-top: 16rem;
   }
-  
-  .list-item {
-    margin: 0.25em 0;
-  }
-  
+}
